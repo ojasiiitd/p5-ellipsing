@@ -1,19 +1,18 @@
 function setup()
 {
-    xWindow = 700
-    yWindow = 500
-    createCanvas(xWindow, yWindow);
-    centres = [];
-    for(var i=0 ; i<100 ; i++)
-    {
-        x = random(xWindow);
-        y = random(yWindow)
-        circle(x , y , 8 , 8);
-        centres.push([x,y]);
-    }
-    console.log(centres[24])
+    createCanvas(800, 800);
 }
 
 function draw()
 {
+    background(0);
+    xWindow = 800;
+    yWindow = 800;
+    centres = [];
+    xCentre = mouseX;;
+    yCentre = mouseY;
+    centres.push([xCentre , yCentre]);
+    fill(color(230, 50, 37));
+    noStroke();
+    circle(xCentre , yCentre , 30)
 }
